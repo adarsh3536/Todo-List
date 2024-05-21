@@ -17,6 +17,14 @@ const App = () => {
     setInput("");
   };
 
+  const deleteItems = (id) => {
+    setItems((oldItems) => {
+      return oldItems.filter((arrElem, index) => {
+        return index !== id;
+      });
+    });
+  };
+
   return (
     <>
       <div className="full-page">
@@ -33,8 +41,15 @@ const App = () => {
             +
           </button>
           <ol>
-            {items.map((itemVal) => {
-              return <Items data={itemVal} />;
+            {items.map((itemVal, index) => {
+              return (
+                <Items
+                  data={itemVal}
+                  key={index}
+                  id={index}
+                  onSelect={deleteItems}
+                />
+              );
             })}
           </ol>
         </div>

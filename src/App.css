@@ -79,3 +79,15 @@ ol li {
   color: rgb(191, 99, 191);
   text-transform: capitalize;
 }
+
+ol li p {
+  color: rgb(212, 153, 212);
+  cursor: pointer;
+  /* border: 1px solid black; */
+  margin-bottom: 6px;
+  margin-left: 10px;
+}
+
+ol li p:hover {
+  color: red;
+}

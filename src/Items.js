@@ -3,7 +3,16 @@ import React from "react";
 const Items = (props) => {
   return (
     <div>
-      <li>{props.data}</li>
+      <li>
+        <p
+          onClick={() => {
+            props.onSelect(props.id);
+          }}
+        >
+          &#128473; &nbsp;
+        </p>
+        {props.data}
+      </li>
     </div>
   );
 };
