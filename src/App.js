@@ -11,6 +11,9 @@ const App = () => {
   };
 
   const addingItems = () => {
+    if (input == "") {
+      return;
+    }
     setItems((oldItems) => {
       return [...oldItems, input];
     });

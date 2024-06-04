@@ -24,6 +24,7 @@
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* overflow: auto; */
 }
 
 .heading {
@@ -64,6 +65,11 @@
   background-color: green;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
 ol {
   margin-top: 30px;
 }
@@ -88,6 +94,15 @@ ol li p {
   margin-left: 10px;
 }
 
-ol li p:hover {
+.content .delete:hover {
   color: red;
+  cursor: pointer;
+}
+
+.content .delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(212, 153, 212);
+  font-size: 20px;
 }
