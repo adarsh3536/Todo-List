@@ -23,9 +23,4 @@ const Items = (props) => {
 
 export default Items;
 
-//Should not add an empty todo
-//Number on the left side of data and "x" delete button on the right
-//Align items center - Sr.Number, Delete, Data
-//Multiple items - Scroll
 
-//Store data on local storage - Try
