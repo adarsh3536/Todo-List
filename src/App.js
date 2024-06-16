@@ -9,6 +9,7 @@ const getLocalItems = () => {
   if (list) {
     return JSON.parse(localStorage.getItem("lists"));
   }
+  return [];
 };
 
 const App = () => {
@@ -58,16 +59,18 @@ const App = () => {
             +
           </button>
           <ol>
-            {items.map((itemVal, index) => {
-              return (
-                <Items
-                  data={itemVal}
-                  key={index}
-                  id={index}
-                  onSelect={deleteItems}
-                />
-              );
-            })}
+            {items &&
+              items.length > 0 &&
+              items.map((itemVal, index) => {
+                return (
+                  <Items
+                    data={itemVal}
+                    key={index}
+                    id={index}
+                    onSelect={deleteItems}
+                  />
+                );
+              })}
           </ol>
         </div>
       </div>
